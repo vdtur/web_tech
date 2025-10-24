@@ -1,123 +1,187 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>TechStore – Магазин электроники</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Шрифт Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechStore — Магазин электроники</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Шапка -->
-  <header>
-    <div class="logo">TechStore</div>
-    <nav>
-      <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#smartphones">Смартфоны</a></li>
-        <li><a href="#laptops">Ноутбуки</a></li>
-        <li><a href="#accessories">Аксессуары</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
+  <!-- Шапка сайта -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo" aria-label="Логотип TechStore">TechStore</div>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#about">О нас</a>
+        <a href="#benefits">Почему мы</a>
+        <a href="#popular">Хиты продаж</a>
+        <a href="#feedback">Обратная связь</a>
+        <a href="#contacts">Контакты</a>
+        <a class="auth-link" href="auth.html">Войти</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Герой-блок -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Лучшие гаджеты в TechStore</h1>
-      <p>Смартфоны, ноутбуки и аксессуары для работы и развлечений.</p>
-    </div>
-    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Смартфон">
-  </section>
-
-  <!-- Смартфоны -->
-  <section id="smartphones">
-    <h2>Смартфоны</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://cdn.mos.cms.futurecdn.net/VCF3zhggiDXPnWcfeZSmTf.jpg" alt="iPhone">
-        <h3>iPhone 17</h3>
-        <p>Цена: 100 000 ₽</p>
-        <label>Цвет:
-          <select>
-            <option>Чёрный</option>
-            <option>Белый</option>
-            <option>Серый</option>
-            <option>Шалфей</option>
-            <option>Лаванда</option>
-            <option>Синий туман</option>
-
-          </select>
-        </label>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Современная электроника с быстрой доставкой</h1>
+        <p>Соберите идеальный сетап: смартфоны, ноутбуки, аксессуары — по честным ценам и с гарантией.</p>
+        <a class="btn" href="#popular">Смотреть каталог</a>
       </div>
-      <div class="card">
-        <img src="https://www.usatoday.com/gcdn/authoring/authoring-images/2025/09/09/USAT/86061100007-applei-phone-17-procolorlineup-250909.jpg?width=1200&disable=upscale&format=pjpg&auto=webp" alt="iPhone pro">
-        <h3>iPhone 17 pro</h3>
-        <p>Цена: 150 000 ₽</p>
-        <label>Цвет:
-          <select>
-            <option>Белый</option>
-            <option>Фиолетовый</option>
-            <option>Зелёный</option>
-          </select>
-        </label>
-      </div>
+      <figure class="hero-media">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Ноутбук и гаджеты на столе" width="560" height="360" />
+        <figcaption class="visually-hidden">Электроника и аксессуары</figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- Ноутбуки -->
-  <section id="laptops">
-    <h2>Ноутбуки</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="MacBook">
-        <h3>MacBook Air M2</h3>
-        <p>Цена: 160 000 ₽</p>
-        <label>Конфигурация:
-          <select>
-            <option>8GB / 256GB</option>
-            <option>16GB / 512GB</option>
-          </select>
-        </label>
+  <main>
+    <!-- О компании -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>О TechStore</h2>
+        <div class="split">
+          <img class="responsive-img" src="https://images.unsplash.com/photo-1555617107-08d3a3cbd399?q=80&w=1200&auto=format&fit=crop" alt="Витрина магазина электроники" width="560" height="360" />
+          <div>
+            <p>Мы — магазин электроники с быстрой доставкой по Москве и России. В ассортименте — смартфоны, ноутбуки, наушники, умные часы, периферия и комплектующие. Работаем напрямую с официальными поставщиками и предоставляем гарантию.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587202372616-e1cf1e1f39b2" alt="Asus">
-        <h3>ASUS ZenBook</h3>
-        <p>Цена: 90 000 ₽</p>
-        <label>Конфигурация:
-          <select>
-            <option>8GB / 256GB</option>
-            <option>16GB / 1TB</option>
-          </select>
-        </label>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Аксессуары -->
-  <section id="accessories">
-    <h2>Аксессуары</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1585386959984-a41552261c3d" alt="AirPods">
-        <h3>AirPods Pro</h3>
-        <p>Цена: 25 000 ₽</p>
+    <!-- Преимущества -->
+    <section id="benefits" class="section section-alt">
+      <div class="container">
+        <h2>Почему выбирают нас</h2>
+        <ul class="benefits-list">
+          <li><strong>Официальная гарантия:</strong> поддержка сервисных центров по всей стране.</li>
+          <li><strong>Быстрая доставка:</strong> по Москве в день заказа, по РФ — от 1 дня.</li>
+          <li><strong>Честные цены:</strong> прозрачные условия, рассрочка и бонусные программы.</li>
+        </ul>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1512499617640-c2f999098aa4" alt="Часы">
-        <h3>Apple Watch</h3>
-        <p>Цена: 45 000 ₽</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Контакты -->
-  <footer id="contacts">
-    <p>&copy; 2024 TechStore. Все права защищены.</p>
-    <p>Телефон: +7 (999) 123-45-67 | Email: info@techstore.ru</p>
+    <!-- Хиты продаж -->
+    <section id="popular" class="section">
+      <div class="container">
+        <h2>Хиты продаж</h2>
+        <div class="table-wrapper">
+          <table class="menu-table">
+            <thead>
+              <tr>
+                <th>Товар</th>
+                <th>Категория</th>
+                <th>Характеристики</th>
+                <th>Цена</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apple Iphone 15 Pro 256ГБ</td>
+                <td>Смартфоны</td>
+                <td>OLED 120 Гц, 5G, e-sim</td>
+                <td>79 990 ₽</td>
+              </tr>
+              <tr>
+                <td>Macbook Air 13</td>
+                <td>Ноутбуки</td>
+                <td>m4/16ГБ/512ГБ SSD</td>
+                <td>92 990 ₽</td>
+              </tr>
+              <tr>
+                <td>Wireless Buds 2</td>
+                <td>Аудио</td>
+                <td>ANC, Bluetooth 5.3, 24 ч</td>
+                <td>12 990 ₽</td>
+              </tr>
+              <tr>
+                <td>Logitech g pro superlight 2</td>
+                <td>Периферия</td>
+                <td>25К DPI, 7 кнопок</td>
+                <td>14 490 ₽</td>
+              </tr>
+              <tr>
+                <td>4K Monitor 27″</td>
+                <td>Мониторы</td>
+                <td>IPS, 4K, 99% sRGB</td>
+                <td>44 990 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section id="feedback" class="section section-alt">
+      <div class="container">
+        <h2>Обратная связь</h2>
+        <form class="form" action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+          <div class="form-row">
+            <label for="fio">ФИО</label>
+            <input type="text" id="fio" name="fio" placeholder="Иванов Иван Иванович" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required />
+          </div>
+
+          <fieldset class="form-row">
+            <legend>Откуда вы узнали о нас?</legend>
+            <label><input type="radio" name="source" value="Реклама" required /> Реклама</label>
+            <label><input type="radio" name="source" value="Друзья" /> От друзей</label>
+            <label><input type="radio" name="source" value="Поиск" /> Поиск в интернете</label>
+          </fieldset>
+
+          <div class="form-row">
+            <label for="topic">Тип обращения</label>
+            <select id="topic" name="topic" required>
+              <option value="" disabled selected>Выберите тип</option>
+              <option value="complaint">Жалоба</option>
+              <option value="suggestion">Предложение</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Текст сообщения</label>
+            <textarea id="message" name="message" rows="5" placeholder="Опишите ваш вопрос или предложение" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="file">Вложения</label>
+            <input type="file" id="file" name="file" />
+          </div>
+
+          <div class="form-row checkbox-row">
+            <label>
+              <input type="checkbox" name="consent" value="yes" required />
+              Даю согласие на обработку персональных данных
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer id="contacts" class="site-footer" aria-labelledby="contacts-title">
+    <div class="container">
+      <h2 id="contacts-title" class="visually-hidden">Контакты</h2>
+      <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+      <p>Email: <a href="mailto:support@techstore.ru">support@techstore.ru</a></p>
+      <p>© 2025 TechStore. Все права защищены.</p>
+    </div>
   </footer>
-
 </body>
 </html>
