@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress – Доставка бизнес-ланчей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/lunch.css">
+</head>
+<body class="page page-orders" data-page="orders">
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">FoodExpress</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="collect-lunch.html" class="nav-link">Собрать ланч</a>
+            <a href="checkout.html" class="nav-link">Оформить заказ</a>
+            <a href="orders.html" class="nav-link active">Заказы</a>
+            <a href="landing.html" class="nav-link">Лендинг</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main container">
+    <h2>История заказов</h2>
+    <div id="orders-container" class="orders-container">
+        <p id="orders-empty">Заказов пока нет.</p>
+    </div>
+</main>
+
+<div class="modal-overlay" id="orders-modal" hidden>
+    <div class="modal modal-large">
+        <button type="button" class="modal-close" id="orders-modal-close">×</button>
+        <h3 id="orders-modal-title"></h3>
+        <div id="orders-modal-body"></div>
+        <div class="modal-actions" id="orders-modal-actions"></div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 FoodExpress</p>
+    </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/orders.js"></script>
+</body>
+</html>

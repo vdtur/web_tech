@@ -1,187 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechStore — Магазин электроники</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress – Доставка бизнес-ланчей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/lunch.css">
 </head>
-<body>
-
-  <!-- Шапка сайта -->
-  <header class="site-header">
+<body class="page page-main">
+<header class="site-header">
     <div class="container header-inner">
-      <div class="logo" aria-label="Логотип TechStore">TechStore</div>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <a href="#about">О нас</a>
-        <a href="#benefits">Почему мы</a>
-        <a href="#popular">Хиты продаж</a>
-        <a href="#feedback">Обратная связь</a>
-        <a href="#contacts">Контакты</a>
-        <a class="auth-link" href="auth.html">Войти</a>
-      </nav>
+        <h1 class="logo">FoodExpress</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Главная</a>
+            <a href="collect-lunch.html" class="nav-link">Собрать ланч</a>
+            <a href="checkout.html" class="nav-link">Оформить заказ</a>
+            <a href="orders.html" class="nav-link">Заказы</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+            <a href="feedback.html" class="nav-link">Обратная связь</a>
+            <a href="landing.html" class="nav-link">Лендинг</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <!-- Герой-блок -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Современная электроника с быстрой доставкой</h1>
-        <p>Соберите идеальный сетап: смартфоны, ноутбуки, аксессуары — по честным ценам и с гарантией.</p>
-        <a class="btn" href="#popular">Смотреть каталог</a>
-      </div>
-      <figure class="hero-media">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Ноутбук и гаджеты на столе" width="560" height="360" />
-        <figcaption class="visually-hidden">Электроника и аксессуары</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <main>
-    <!-- О компании -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>О TechStore</h2>
-        <div class="split">
-          <img class="responsive-img" src="https://images.unsplash.com/photo-1555617107-08d3a3cbd399?q=80&w=1200&auto=format&fit=crop" alt="Витрина магазина электроники" width="560" height="360" />
-          <div>
-            <p>Мы — магазин электроники с быстрой доставкой по Москве и России. В ассортименте — смартфоны, ноутбуки, наушники, умные часы, периферия и комплектующие. Работаем напрямую с официальными поставщиками и предоставляем гарантию.</p>
-          </div>
+<main class="main container">
+    <section class="about" id="about">
+        <h2>О компании</h2>
+        <div class="about-inner">
+            <img id="about-image" src="" alt="Бизнес-ланч в офисе" class="about-image">
+            <p>
+                FoodExpress — служба доставки бизнес-ланчей в Москве. Мы готовим свежие блюда каждый день,
+                собираем сбалансированные комплексы и привозим их вовремя прямо в ваш офис.
+                Выберите суп, главное блюдо, салат или стартер, напиток и десерт — и соберите идеальный ланч.
+            </p>
         </div>
-      </div>
     </section>
 
-    <!-- Преимущества -->
-    <section id="benefits" class="section section-alt">
-      <div class="container">
+    <section class="benefits">
         <h2>Почему выбирают нас</h2>
         <ul class="benefits-list">
-          <li><strong>Официальная гарантия:</strong> поддержка сервисных центров по всей стране.</li>
-          <li><strong>Быстрая доставка:</strong> по Москве в день заказа, по РФ — от 1 дня.</li>
-          <li><strong>Честные цены:</strong> прозрачные условия, рассрочка и бонусные программы.</li>
+            <li>Доставка по Москве от 45 минут</li>
+            <li>Меню на каждый день с сезонными блюдами</li>
+            <li>Корпоративные условия и безналичная оплата</li>
         </ul>
-      </div>
     </section>
 
-    <!-- Хиты продаж -->
-    <section id="popular" class="section">
-      <div class="container">
-        <h2>Хиты продаж</h2>
+    <section class="popular">
+        <h2>Популярные блюда</h2>
         <div class="table-wrapper">
-          <table class="menu-table">
-            <thead>
-              <tr>
-                <th>Товар</th>
-                <th>Категория</th>
-                <th>Характеристики</th>
-                <th>Цена</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Apple Iphone 15 Pro 256ГБ</td>
-                <td>Смартфоны</td>
-                <td>OLED 120 Гц, 5G, e-sim</td>
-                <td>79 990 ₽</td>
-              </tr>
-              <tr>
-                <td>Macbook Air 13</td>
-                <td>Ноутбуки</td>
-                <td>m4/16ГБ/512ГБ SSD</td>
-                <td>92 990 ₽</td>
-              </tr>
-              <tr>
-                <td>Wireless Buds 2</td>
-                <td>Аудио</td>
-                <td>ANC, Bluetooth 5.3, 24 ч</td>
-                <td>12 990 ₽</td>
-              </tr>
-              <tr>
-                <td>Logitech g pro superlight 2</td>
-                <td>Периферия</td>
-                <td>25К DPI, 7 кнопок</td>
-                <td>14 490 ₽</td>
-              </tr>
-              <tr>
-                <td>4K Monitor 27″</td>
-                <td>Мониторы</td>
-                <td>IPS, 4K, 99% sRGB</td>
-                <td>44 990 ₽</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="dishes-table">
+                <thead>
+                    <tr>
+                        <th>Блюдо</th>
+                        <th>Категория</th>
+                        <th>Вес</th>
+                        <th>Цена, ₽</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Гаспачо</td>
+                        <td>Суп</td>
+                        <td>350 г</td>
+                        <td>195</td>
+                    </tr>
+                    <tr>
+                        <td>Куриное филе с овощами-гриль</td>
+                        <td>Главное блюдо</td>
+                        <td>320 г</td>
+                        <td>290</td>
+                    </tr>
+                    <tr>
+                        <td>Салат «Греческий»</td>
+                        <td>Салат</td>
+                        <td>220 г</td>
+                        <td>210</td>
+                    </tr>
+                    <tr>
+                        <td>Домашний лимонад</td>
+                        <td>Напиток</td>
+                        <td>400 мл</td>
+                        <td>140</td>
+                    </tr>
+                    <tr>
+                        <td>Чизкейк ванильный</td>
+                        <td>Десерт</td>
+                        <td>120 г</td>
+                        <td>220</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-      </div>
     </section>
+</main>
 
-    <!-- Форма обратной связи -->
-    <section id="feedback" class="section section-alt">
-      <div class="container">
-        <h2>Обратная связь</h2>
-        <form class="form" action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
-          <div class="form-row">
-            <label for="fio">ФИО</label>
-            <input type="text" id="fio" name="fio" placeholder="Иванов Иван Иванович" required />
-          </div>
-
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="name@example.com" required />
-          </div>
-
-          <fieldset class="form-row">
-            <legend>Откуда вы узнали о нас?</legend>
-            <label><input type="radio" name="source" value="Реклама" required /> Реклама</label>
-            <label><input type="radio" name="source" value="Друзья" /> От друзей</label>
-            <label><input type="radio" name="source" value="Поиск" /> Поиск в интернете</label>
-          </fieldset>
-
-          <div class="form-row">
-            <label for="topic">Тип обращения</label>
-            <select id="topic" name="topic" required>
-              <option value="" disabled selected>Выберите тип</option>
-              <option value="complaint">Жалоба</option>
-              <option value="suggestion">Предложение</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Текст сообщения</label>
-            <textarea id="message" name="message" rows="5" placeholder="Опишите ваш вопрос или предложение" required></textarea>
-          </div>
-
-          <div class="form-row">
-            <label for="file">Вложения</label>
-            <input type="file" id="file" name="file" />
-          </div>
-
-          <div class="form-row checkbox-row">
-            <label>
-              <input type="checkbox" name="consent" value="yes" required />
-              Даю согласие на обработку персональных данных
-            </label>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn">Отправить</button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Подвал -->
-  <footer id="contacts" class="site-footer" aria-labelledby="contacts-title">
-    <div class="container">
-      <h2 id="contacts-title" class="visually-hidden">Контакты</h2>
-      <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
-      <p>Email: <a href="mailto:support@techstore.ru">support@techstore.ru</a></p>
-      <p>© 2025 TechStore. Все права защищены.</p>
+<footer class="site-footer" id="contacts">
+    <div class="container footer-inner">
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Email: <a href="mailto:info@foodexpress.ru">info@foodexpress.ru</a></p>
+        <p>© 2025 FoodExpress, доставка бизнес-ланчей в Москве</p>
     </div>
-  </footer>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/dishes-api.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const dishes = await loadDishes();
+    // Ищем главное блюдо или суп для изображения
+    const mainDish = dishes.find(d => d.category === "main") || dishes.find(d => d.category === "soup") || dishes[0];
+    if (mainDish && mainDish.image) {
+      const img = document.getElementById("about-image");
+      if (img) {
+        img.src = mainDish.image;
+        img.alt = mainDish.name || "Бизнес-ланч в офисе";
+      }
+    }
+  } catch (error) {
+    console.error("Ошибка загрузки изображения из API:", error);
+    // Fallback на локальное изображение
+    const img = document.getElementById("about-image");
+    if (img) {
+      img.src = "images/main1.jpg";
+    }
+  }
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress – Доставка бизнес-ланчей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/lunch.css">
+</head>
+<body class="page page-checkout" data-page="checkout">
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">FoodExpress</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="collect-lunch.html" class="nav-link">Собрать ланч</a>
+            <a href="checkout.html" class="nav-link active">Оформить заказ</a>
+            <a href="orders.html" class="nav-link">Заказы</a>
+            <a href="landing.html" class="nav-link">Лендинг</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main container checkout-layout">
+    <section class="checkout-dishes">
+        <h2>Состав заказа</h2>
+        <div id="checkout-dishes-list" class="checkout-dishes-list">
+            <p id="checkout-empty" class="checkout-empty">
+                Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу
+                <a href="collect-lunch.html">Собрать ланч</a>.
+            </p>
+        </div>
+    </section>
+
+    <section class="checkout-form-section">
+        <h2>Оформление заказа</h2>
+        <form id="checkout-form" class="form checkout-form">
+            <div class="order-summary">
+                <h3>Ваш заказ</h3>
+                <ul class="order-summary-list">
+                    <li>Суп: <span data-summary-category="soup">Не выбран</span></li>
+                    <li>Главное блюдо: <span data-summary-category="main">Не выбрано</span></li>
+                    <li>Салат / стартер: <span data-summary-category="starter">Не выбран</span></li>
+                    <li>Напиток: <span data-summary-category="drink">Не выбран</span></li>
+                    <li>Десерт: <span data-summary-category="dessert">Не выбран</span></li>
+                </ul>
+                <p class="order-summary-total">
+                    Стоимость заказа: <span id="checkout-total">0</span> ₽
+                </p>
+            </div>
+
+            <div class="checkout-fields">
+                <label>
+                    ФИО
+                    <input type="text" name="full_name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Телефон
+                    <input type="tel" name="phone" required>
+                </label>
+                <label>
+                    Адрес доставки
+                    <input type="text" name="delivery_address" required>
+                </label>
+                <label>
+                    Тип доставки
+                    <select name="delivery_type" id="delivery_type">
+                        <option value="asap">Как можно скорее (с 7:00 до 23:00)</option>
+                        <option value="by_time">К указанному времени</option>
+                    </select>
+                </label>
+                <label id="delivery-time-wrapper" class="hidden">
+                    Время доставки
+                    <input type="time" name="delivery_time">
+                </label>
+                <label>
+                    Комментарий к заказу
+                    <textarea name="comment" rows="3"></textarea>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-primary">Отправить заказ</button>
+        </form>
+    </section>
+</main>
+
+<div class="modal-overlay" id="checkout-modal" hidden>
+    <div class="modal">
+        <h3 id="checkout-modal-title">Ошибка</h3>
+        <p id="checkout-modal-text"></p>
+        <button type="button" class="btn-primary" id="checkout-modal-ok">Окей</button>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 FoodExpress</p>
+    </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/dishes-local.js"></script>
+<script src="js/dishes-api.js"></script>
+<script src="js/order-common.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

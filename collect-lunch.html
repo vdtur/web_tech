@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress – Доставка бизнес-ланчей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/lunch.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body class="page page-lunch" data-page="collect">
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">FoodExpress</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="collect-lunch.html" class="nav-link active">Собрать ланч</a>
+            <a href="checkout.html" class="nav-link">Оформить заказ</a>
+            <a href="orders.html" class="nav-link">Заказы</a>
+            <a href="landing.html" class="nav-link">Лендинг</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main container lunch-layout">
+    <section class="menu-area">
+        <h2>Собрать ланч</h2>
+
+        <section class="menu-section" data-category="soup">
+            <div class="menu-section-header">
+                <h3>Выберите суп</h3>
+                <div class="filters" data-filters-for="soup"></div>
+            </div>
+            <div class="dishes-grid dishes-grid-3 js-dishes" data-category="soup"></div>
+        </section>
+
+        <section class="menu-section" data-category="main">
+            <div class="menu-section-header">
+                <h3>Выберите главное блюдо</h3>
+                <div class="filters" data-filters-for="main"></div>
+            </div>
+            <div class="dishes-grid dishes-grid-3 js-dishes" data-category="main"></div>
+        </section>
+
+        <section class="menu-section" data-category="starter">
+            <div class="menu-section-header">
+                <h3>Салаты и стартеры</h3>
+                <div class="filters" data-filters-for="starter"></div>
+            </div>
+            <div class="dishes-grid dishes-grid-3 js-dishes" data-category="starter"></div>
+        </section>
+
+        <section class="menu-section" data-category="drink">
+            <div class="menu-section-header">
+                <h3>Выберите напиток</h3>
+                <div class="filters" data-filters-for="drink"></div>
+            </div>
+            <div class="dishes-grid dishes-grid-3 js-dishes" data-category="drink"></div>
+        </section>
+
+        <section class="menu-section" data-category="dessert">
+            <div class="menu-section-header">
+                <h3>Выберите десерт</h3>
+                <div class="filters" data-filters-for="dessert"></div>
+            </div>
+            <div class="dishes-grid dishes-grid-3 js-dishes" data-category="dessert"></div>
+        </section>
+    </section>
+
+    <aside class="order-panel" id="order-panel">
+        <h2>Ваш ланч</h2>
+        <ul class="panel-list" id="order-panel-list">
+            <li>Суп: <span data-panel-category="soup">Не выбран</span> <button type="button" class="panel-remove" data-remove="soup">Удалить</button></li>
+            <li>Главное блюдо: <span data-panel-category="main">Не выбрано</span> <button type="button" class="panel-remove" data-remove="main">Удалить</button></li>
+            <li>Салат / стартер: <span data-panel-category="starter">Не выбран</span> <button type="button" class="panel-remove" data-remove="starter">Удалить</button></li>
+            <li>Напиток: <span data-panel-category="drink">Не выбран</span> <button type="button" class="panel-remove" data-remove="drink">Удалить</button></li>
+            <li>Десерт: <span data-panel-category="dessert">Не выбран</span> <button type="button" class="panel-remove" data-remove="dessert">Удалить</button></li>
+        </ul>
+        <p class="panel-total">
+            Стоимость: <span id="order-panel-sum">0</span> ₽
+        </p>
+        <a href="checkout.html" class="btn-primary panel-link disabled" id="go-checkout" aria-disabled="true">
+            Перейти к оформлению
+        </a>
+        <p class="panel-hint">
+            Чтобы оформить заказ, добавьте блюда так, чтобы в ланче был хотя бы суп, главное блюдо и напиток.
+        </p>
+    </aside>
+</main>
+
+<div class="modal-overlay" id="validation-modal" hidden>
+    <div class="modal">
+        <h3>Не хватает блюд</h3>
+        <p id="validation-modal-text"></p>
+        <button type="button" class="btn-primary" id="validation-modal-ok">Окей</button>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 FoodExpress</p>
+    </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/dishes-local.js"></script>
+<script src="js/dishes-api.js"></script>
+<script src="js/order-common.js"></script>
+<script src="js/collect.js"></script>
+</body>
+</html>

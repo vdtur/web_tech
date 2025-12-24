@@ -1,0 +1,33 @@
+@import url("styles.css");
+
+.page-feedback .feedback-main {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+    gap: 32px;
+}
+
+.auth-wrapper {
+    min-height: 320px;
+    background-image: url("../images/auth-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.auth-form {
+    max-width: 320px;
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 800px) {
+    .page-feedback .feedback-main {
+        grid-template-columns: 1fr;
+    }
+}

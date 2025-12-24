@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress – Доставка бизнес-ланчей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body class="page page-feedback">
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">FoodExpress</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="collect-lunch.html" class="nav-link">Собрать ланч</a>
+            <a href="feedback.html" class="nav-link active">Обратная связь</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main container feedback-main">
+    <section class="feedback-section">
+        <h2>Форма обратной связи</h2>
+        <form action="https://httpbin.org/post" method="post" class="form feedback-form">
+            <label>
+                ФИО
+                <input type="text" name="full_name" required>
+            </label>
+            <label>
+                Email
+                <input type="email" name="email" required>
+            </label>
+            <fieldset class="form-fieldset">
+                <legend>Откуда вы о нас узнали?</legend>
+                <label><input type="radio" name="source" value="friends" checked> От друзей</label>
+                <label><input type="radio" name="source" value="ads"> Реклама в интернете</label>
+                <label><input type="radio" name="source" value="office"> В офисе / от коллег</label>
+            </fieldset>
+            <label>
+                Тип обращения
+                <select name="type">
+                    <option value="complaint">Жалоба</option>
+                    <option value="suggestion">Предложение</option>
+                    <option value="question">Вопрос</option>
+                </select>
+            </label>
+            <label>
+                Текст сообщения
+                <textarea name="message" rows="5" required></textarea>
+            </label>
+            <label>
+                Вложения
+                <input type="file" name="attachment">
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="consent" required>
+                Даю согласие на обработку персональных данных
+            </label>
+            <button type="submit" class="btn-primary">Отправить</button>
+        </form>
+    </section>
+
+    <section class="auth-section">
+        <h2>Форма аутентификации</h2>
+        <div class="auth-wrapper">
+            <form action="https://httpbin.org/post" method="post" class="form auth-form">
+                <label>
+                    Логин
+                    <input type="text" name="login" required>
+                </label>
+                <label>
+                    Пароль
+                    <input type="password" name="password" required>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="remember">
+                    Запомнить меня
+                </label>
+                <button type="submit" class="btn-primary">Войти</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 FoodExpress</p>
+    </div>
+</footer>
+</body>
+</html>
