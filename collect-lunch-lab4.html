@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress – Собрать ланч (ЛР4)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/lunch.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body class="page page-lunch" data-page="lab4">
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">FoodExpress</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="collect-lunch-lab3.html" class="nav-link">Собрать ланч (ЛР3)</a>
+            <a href="collect-lunch-lab4.html" class="nav-link active">Собрать ланч (ЛР4)</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main container lunch-layout">
+    <section class="menu-area">
+        <h2>Собрать ланч (версия для ЛР4)</h2>
+
+        <section class="menu-section" data-category="soup">
+            <h3>Супы</h3>
+            <select class="dish-select js-dishes" data-category="soup">
+                <option value="">Выберите суп</option>
+            </select>
+        </section>
+
+        <section class="menu-section" data-category="main">
+            <h3>Главные блюда</h3>
+            <select class="dish-select js-dishes" data-category="main">
+                <option value="">Выберите главное блюдо</option>
+            </select>
+        </section>
+
+        <section class="menu-section" data-category="drink">
+            <h3>Напитки</h3>
+            <select class="dish-select js-dishes" data-category="drink">
+                <option value="">Выберите напиток</option>
+            </select>
+        </section>
+    </section>
+
+    <aside class="order-area">
+        <h2>Сделать заказ</h2>
+        <form action="https://httpbin.org/post" method="post" class="form order-form" id="order-form-lab4">
+            <div class="order-form-columns">
+                <div class="order-form-left">
+                    <h3>Ваш заказ</h3>
+                    
+                    <p class="order-empty" id="order-empty">Ничего не выбрано</p>
+
+                    <div class="order-category" data-order-wrapper="soup" hidden>
+                        <p><strong>Суп</strong></p>
+                        <p class="order-item" data-order-category="soup"></p>
+                    </div>
+
+                    <div class="order-category" data-order-wrapper="main" hidden>
+                        <p><strong>Главное блюдо</strong></p>
+                        <p class="order-item" data-order-category="main"></p>
+                    </div>
+
+                    <div class="order-category" data-order-wrapper="drink" hidden>
+                        <p><strong>Напиток</strong></p>
+                        <p class="order-item" data-order-category="drink"></p>
+                    </div>
+
+                    <div class="order-total" id="order-total-lab4" hidden>
+                        <p><strong>Стоимость заказа</strong></p>
+                        <p class="order-sum-wrapper"><strong class="order-sum">0</strong> ₽</p>
+                    </div>
+
+                    <label>
+                        Комментарии к заказу
+                        <textarea name="comment" rows="3"></textarea>
+                    </label>
+                </div>
+
+                <div class="order-form-right">
+                    <h3>Ваши данные</h3>
+                    
+                    <label>
+                        Имя
+                        <input type="text" name="full_name" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" value="1" checked>
+                        Получать информацию о скидках и акциях
+                    </label>
+                    <label>
+                        Номер телефона
+                        <input type="tel" name="phone" required>
+                    </label>
+                    <label>
+                        Адрес доставки
+                        <input type="text" name="delivery_address" required>
+                    </label>
+                    <p class="delivery-note">Доставка осуществляется только по Москве</p>
+                    
+                    <label>
+                        Время доставки:
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="delivery_time" value="asap">
+                                Как можно скорее
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="delivery_time" value="by_time">
+                                К указанному времени
+                            </label>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <input type="hidden" name="soup" id="order-soup-input">
+            <input type="hidden" name="main" id="order-main-input">
+            <input type="hidden" name="drink" id="order-drink-input">
+
+            <button type="submit" class="btn-primary">Отправить заказ</button>
+        </form>
+    </aside>
+</main>
+
+<div class="modal-overlay" id="lab4-modal" hidden>
+    <div class="modal">
+        <p id="lab4-modal-text">Выберите хотя бы одно блюдо.</p>
+        <button type="button" class="btn-primary" id="lab4-modal-ok">Окей</button>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 FoodExpress</p>
+    </div>
+</footer>
+
+<script src="js/collect-lab4.js"></script>
+</body>
+</html>
